@@ -16,6 +16,8 @@ int largestNum();
 
 int main()
 {
+    
+    //Make the code accept any integer;
 
     getline(cin,input);
 
@@ -33,7 +35,7 @@ int main()
 
     for(int i = 0; i < large; i++)
     {
-        for(int j = 0; j < input.size(); j++)
+        for(int j = 0; j < valuesCounter; j++)
         {
             if(values[j] >= (large - i))
             {
