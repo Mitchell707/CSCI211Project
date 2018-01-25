@@ -17,11 +17,11 @@ int largestNum();
 int main()
 {
 
-    cin >> input;
+    getline(cin,input);
 
     for(int i = 0; i < input.size(); i++)
     {
-        if(ChartoInt(input[i]) >= 0)
+        if(ChartoInt(input[i]) > 0)
         {
             values[valuesCounter] = ChartoInt(input[i]);
             valuesCounter++;
@@ -123,6 +123,8 @@ int ChartoInt(char c)
     {
         return 9;
     }
+        
+    return -1;
 
 }
 
