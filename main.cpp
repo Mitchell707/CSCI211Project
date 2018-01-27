@@ -18,6 +18,9 @@ int main()
 {
     
     //Make the code accept any integer;
+        //Make it chceck one int ahead and see if its an int or not
+        //Make it multiply the first int by 10 and add the second one
+
 
     getline(cin,input);
 
@@ -25,13 +28,23 @@ int main()
     {
         if(ChartoInt(input[i]) > 0)
         {
-            values[valuesCounter] = ChartoInt(input[i]);
-            valuesCounter++;
-        
+            if(ChartoInt(input[i + 1]) > 0)
+            {
+                values[valuesCounter] = (ChartoInt(input[i]) * 10) + ChartoInt(input[i + 1]);
+                i++;
+                valuesCounter++;
+            }
+            else
+            {
+                values[valuesCounter] = ChartoInt(input[i]);
+                valuesCounter++;
+            }
         }
     }
     
     large = largestNum();
+    
+    cout << large << endl;
 
     for(int i = 0; i < large; i++)
     {
@@ -125,8 +138,13 @@ int ChartoInt(char c)
     {
         return 9;
     }
-        
-    return -1;
+    
+    if(c == ' ')
+    {
+        return -1;
 
+    }
+
+    return -2;
 }
 
