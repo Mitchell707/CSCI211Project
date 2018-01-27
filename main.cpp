@@ -24,7 +24,7 @@ int main()
 
     getline(cin,input);
 
-    cout << input << endl;
+    //cout << input << endl;
 
     for(int i = 0; i < input.size(); i++)
     {
