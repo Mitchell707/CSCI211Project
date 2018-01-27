@@ -36,7 +36,7 @@ int main()
                 i += 2;
                 valuesCounter++;
             }
-            else
+            else if(ChartoInt(input[i] > 0))
             {
                 values[valuesCounter] = ChartoInt(input[i]);
                 valuesCounter++;
