@@ -28,7 +28,7 @@ int main()
 
     for(int i = 0; i < input.size(); i++)
     {
-        if(ChartoInt(input[i]) >= 0)
+        if(ChartoInt(input[i]) > 0)
         {
             if(ChartoInt(input[i + 1]) >= 0)
             {
