@@ -24,6 +24,8 @@ int main()
 
     getline(cin,input);
 
+    cout << input << endl;
+
     for(int i = 0; i < input.size(); i++)
     {
         if(ChartoInt(input[i]) > 0)
@@ -44,8 +46,6 @@ int main()
     
     large = largestNum();
     
-    cout << large << endl;
-
     for(int i = 0; i < large; i++)
     {
         for(int j = 0; j < valuesCounter; j++)
